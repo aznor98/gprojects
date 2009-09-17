@@ -1,0 +1,26 @@
+<h1>Listing sofas</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Size</th>
+  </tr>
+
+<% @sofas.each do |sofa| %>
+  <tr>
+    <td><%=h sofa.title %></td>
+    <td><%=h sofa.description %></td>
+    <td><%=h sofa.image_url %></td>
+    <td><%=h sofa.size %></td>
+    <td><%= link_to 'Show', sofa %></td>
+    <td><%= link_to 'Edit', edit_sofa_path(sofa) %></td>
+    <td><%= link_to 'Destroy', sofa, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sofa', new_sofa_path %>

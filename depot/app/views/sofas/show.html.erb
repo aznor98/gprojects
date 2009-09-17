@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @sofa.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @sofa.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%=h @sofa.image_url %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @sofa.size %>
+</p>
+
+
+<%= link_to 'Edit', edit_sofa_path(@sofa) %> |
+<%= link_to 'Back', sofas_path %>
